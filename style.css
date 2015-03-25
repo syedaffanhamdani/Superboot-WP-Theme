@@ -1,0 +1,505 @@
+/*
+Theme Name: Superboot Wordpress
+Theme URI: http://smartass.io
+Description: A bootstrap wordpress ready to use theme with additional add-ons that were pulled together from web resources to empower your development features and save you time on versatile feature integrations.
+
+Copyright (C)  2014  Eric Cavazos
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
+
+Version: 1.0
+Author: Eric Cavazos
+Author URI: http://smartass.io;
+*/
+
+/* Google Font Import */
+@import url(http://fonts.googleapis.com/css?family=Sancreek);
+
+/**==================================================
+******************** HELPERS ************************                             
+===================================================**/
+
+/** Margin & Padding **/
+
+/** Padding **/
+
+.tp-pad-s{
+    padding-top:20px;
+}
+
+.tp-pad-m{
+    padding-top:40px;
+}
+
+.tp-pad-l{
+    padding-top:60px;
+}
+
+.rt-pad-s{
+    padding-right:10px;
+}
+
+/** Margins **/
+
+.tp-marg{
+    margin-top:20px;
+}
+
+.mg-tp-xl{
+    margin-top:80px;
+}
+
+.mg-tp-s{
+    margin-top:10px;
+}
+    /** Right **/
+    .mg-rt-s{
+       margin-right:10px;
+    }
+    .mg-rt-m{
+        margin-right:20px;
+    }
+    
+
+.mg-btm-m{
+    margin-bottom:20px;
+}
+
+.mg-btm-l{
+    margin-bottom:40px;
+}
+
+.mg-lft-m{
+    margin-left:20px;
+}
+
+/** Colors **/
+
+.white{
+    color:#f1f1f1;
+}
+.red{
+    color:red;
+}
+.black{
+    color: #333;
+}
+
+
+/** Text **/
+
+.bold{
+    font-weight:700;
+}
+
+.center{
+    text-align: center;
+}
+
+.valign-m{
+    vertical-align: middle;
+}
+
+/** Image Filters **/
+
+.grayscale{
+    filter: grayscale(100%); /* Current draft standard */
+    -webkit-filter: grayscale(100%); /* New WebKit */
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%); 
+    -o-filter: grayscale(100%); /* Not yet supported in Gecko, Opera or IE */ 
+    filter: url(resources.svg#desaturate); /* Gecko */
+    filter: gray; /* IE */
+    -webkit-filter: grayscale(1); /* Old WebKit */
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+
+.grayscale:hover{
+    filter:grayscale(0%);
+    -webkit-filter: grayscale(0%); /* New WebKit */
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%); 
+    -o-filter: grayscale(0%);
+    opacity: 1;
+}
+
+.circle{
+    border-radius: 50%;
+    border: 3px solid #f0ad4e;
+}
+
+/** Display **/
+
+.block{
+    display: block;
+}
+
+.inline{
+    display: inline;
+}
+
+/** Borders **/
+
+.br-bottom{
+    border-bottom: 1px solid #ccc;
+    padding-bottom:20px;
+}
+
+/** Special **/
+
+.inline-code{
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    background-color:#f5f5f5;
+    padding:2px;
+    border: 1px solid #ccc;
+}
+
+/** Homepage **/
+
+.circle-down{
+    border: 3px solid #f1f1f1;
+    border-radius: 50%;
+    font-size:24px;
+    color:#f1f1f1;
+    padding:10px;
+    margin-top:20px;
+    opacity:.5;
+    text-decoration: none;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+.circle-down:hover{
+    text-decoration: none;
+    color:#fff;
+    opacity:1;
+}
+
+.content-block{
+    display:block;
+    width: 100%;
+    vertical-align: top;
+    padding-bottom: 50px;
+}
+
+.content-block:after{
+    content:'';
+    display:table;
+    clear:both;
+}
+
+.hideme{
+     opacity:0;
+}
+
+#top-homepage {
+	min-height:700px;
+    padding-top:5%;
+    text-align:center;
+	/*background:url(js/holder.js/100%x100%) no-repeat;*/
+    background:url('images/boot-background.png') no-repeat;
+    background-size:100%;
+}
+
+#homepage_logo{
+    width:100%;
+}
+
+#top-homepage h2, h3, h4, h5 {
+    line-height:1.3;
+}
+
+.download{
+    text-align:center;
+}
+
+.btn-1a:hover, .btn-1a:active {
+    color:#333;
+}
+
+#home-nav{
+    position:relative;
+    top:-50px;
+}
+
+#home-nav ul.nav{
+    text-align: center;
+    padding:inherit;
+}
+
+#home-nav ul.nav li a{
+    font-family:Sancreek, serif;
+    font-size:24px;
+    color:#f1f1f1;
+    -webkit-transition: color .5s;
+    -moz-transition: color .5s;
+    -ms-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+}
+
+#home-nav ul.nav li a:hover{
+    font-family:Sancreek, serif;
+    color:#F7931D;
+    background:none;
+}
+
+.homepage-title{
+    font-family: 'Holtwood One SC', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+#bootstrap h2{
+    font-family:Sancreek, serif;
+    font-size:36px;
+}
+
+#bootstrap h3{
+    font-weight: 200;
+    line-height:1.5;
+}
+
+.input--dropdown{
+    width:200px;
+}
+
+/* Button Override Examples */
+
+.button-block .btn-8g{
+    background-color:#FDA200;
+    color:#fff;
+}
+
+.button-block .btn-1b{
+    border:1px solid #E91616;
+    color:#E91616;
+}
+
+.button-block .btn-1b:hover{
+    color:#FFF;
+}
+
+.button-block .btn-1b:after{
+    background-color:#E91616;
+}
+
+/** Special Icon Examples */
+
+.content-block .icon-moon-user{
+    font-size:10rem;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -ms-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+
+.content-block .icon-moon-user:hover{
+    font-size:10rem;
+    color:red;
+}
+
+/** Icons Page **/
+
+.icon-header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+.ico-top{
+    font-size:35rem !important; 
+    position: inherit !important;
+    line-height: normal !important;
+    color:#f1f1f1;
+    opacity:.8;
+    -webkit-transition: opacity .4s;
+    -moz-transition: opacity .4s;
+    -ms-transition: opacity .4s;
+    -o-transition: opacity .4s;
+    transition: opacity .4s;
+}
+
+.ico-top:hover{
+    opacity: 1;
+}
+
+#icon-page-top{
+    height:501px;
+    border-bottom:2px solid #333;
+}
+
+#icon-page-content{
+    background-color:#fff;
+}
+
+#icon-style{
+    padding:20px 0;
+    border-bottom: 1px solid #ccc;
+    background-color:#f1f1f1;
+}
+
+/** Modal Page **/
+
+#modal-top{
+    background-image: url(images/11.jpg);
+    overflow:hidden;
+    padding: 0px 0px 60px;
+    border-bottom: 2px solid #333;
+}
+
+#modal-top h1{
+    padding-top:50px;
+    text-shadow: 1px 1px 1px #888;
+}
+
+#modal-top h3{
+    text-shadow: 1px 1px 1px #888;
+}
+
+#modal-top:after{
+    content:'';
+    display:table;
+}
+
+.header-modal{
+    position: relative;
+    left:-300px;
+    opacity:.7;
+    -webkit-transition: all .4s ease-in;
+    -moz-transition: all .4s ease-in;
+    -ms-transition: all .4s ease-in;
+    -o-transition: all .4s ease-in;
+    transition: all .4s ease-in;
+}
+
+.header-modal:hover{
+    left:-250px;
+    opacity: 1;
+}
+
+
+
+#modal-page-content .modal-table table > thead > tr > td {
+    vertical-align: middle;
+}
+
+/** About Us Page **/
+#about-us-1{
+    min-height: 300px;
+    background-image: url(images/10.jpg);
+    overflow: hidden;
+    text-align: center;
+}
+
+
+
+/** Animation Page **/
+
+#animations-top{
+    background-image: url(images/10.jpg);
+    overflow:hidden;
+    padding: 0px 0px 60px;
+    border-bottom: 2px solid #333;
+}
+
+#animations-top h1{
+    padding-top:50px;
+    text-shadow: 1px 1px 1px #888;
+}
+
+#animations-top h3{
+    text-shadow: 1px 1px 1px #888;
+}
+
+/** Button Page **/
+#button-top{
+    background-image: url(images/6.jpg);
+    overflow:hidden;
+    padding: 0px 0px 60px;
+    border-bottom: 2px solid #333;
+}
+
+#button-top h1{
+    padding-top:50px;
+    text-shadow: 1px 1px 1px #333;
+}
+
+#button-top h3{
+    text-shadow: 1px 1px 1px #333;
+}
+
+#button-top:after{
+    content:'';
+    display:table;
+}
+
+.btn-1:hover{
+    color:#333;
+}
+
+.example-btn .btn-1{
+    color:#333;
+    border: 3px solid #333;
+}
+
+.example-btn .btn-1:hover{
+    color:#f1f1f1;
+}
+
+.example-btn .btn-1c:after{
+    background-color:#333;
+}
+
+.hr-row{
+    background-color:#333;
+    color:#f1f1f1;
+}
+
+.tb-dk{
+    background-color:#888;
+}
+
+/** Footer **/
+
+#footer {
+	background-color:#333;
+	padding:20px 0;
+}
+
+#footer h3{
+    color: #f1f1f1;
+}
+
+#footer p{
+    padding: 5px 0;
+}
+
+.footer-link{
+    color: #f1f1f1;
+    font-weight: 600;
+    text-decoration: none;
+    -webkit-transition: color .4s;
+    -moz-transition: color .4s;
+    -ms-transition: color .4s;
+    -o-transition: color .4s;
+    transition: color .4s;
+}
+
+.footer-link:hover{
+    text-decoration: none;
+    color:#FDA200;
+}
